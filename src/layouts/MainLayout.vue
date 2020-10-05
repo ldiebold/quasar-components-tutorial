@@ -14,8 +14,6 @@
         <q-toolbar-title>
           Quasar App
         </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
@@ -40,17 +38,20 @@
         </q-item>
 
         <q-item clickable to="avatar">
-          <q-item-section side avatar>
-            <q-avatar
-              color="blue"
-              text-color="white"
-            >
-              <img class="q-pa-xs" src="https://upload.wikimedia.org/wikipedia/en/8/86/Avatar_Aang.png" />
-            </q-avatar>
-          </q-item-section>
-
           <q-item-section>
             QAvatar
+          </q-item-section>
+        </q-item>
+
+        <q-item clickable to="badge">
+          <q-item-section>
+            QBadge
+          </q-item-section>
+
+          <q-item-section side>
+            <q-badge color="blue">
+              updated
+            </q-badge>
           </q-item-section>
         </q-item>
       </q-list>

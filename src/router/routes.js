@@ -6,7 +6,8 @@ const routes = [
     children: [
       { path: '', component: () => import('pages/Index.vue') },
       { path: 'ajax-bar', component: () => import('pages/QAjaxBarPage.vue') },
-      { path: 'avatar', component: () => import('pages/QAvatarPage.vue') }
+      { path: 'avatar', component: () => import('pages/QAvatarPage.vue') },
+      { path: 'badge', component: () => import('pages/QBadgePage.vue') }
     ]
   },
 
