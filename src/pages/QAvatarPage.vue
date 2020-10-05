@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    QAjaxBarPage
+    Avatar
   </q-page>
 </template>
 

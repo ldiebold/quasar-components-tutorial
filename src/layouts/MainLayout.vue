@@ -32,10 +32,16 @@
         >
           Components
         </q-item-label>
-
-        <q-item clickable to="/ajax-bar">
+        <!-- Component Menu Items -->
+        <q-item clickable to="ajax-bar">
           <q-item-section>
             QAjaxBar
+          </q-item-section>
+        </q-item>
+
+        <q-item clickable to="avatar">
+          <q-item-section>
+            QAvatar
           </q-item-section>
         </q-item>
       </q-list>
@@ -51,6 +57,7 @@
 
 export default {
   name: 'MainLayout',
+  components: { },
   data () {
     return {
       leftDrawerOpen: false
