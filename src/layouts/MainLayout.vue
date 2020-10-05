@@ -47,11 +47,11 @@
           <q-item-section>
             QBadge
           </q-item-section>
+        </q-item>
 
-          <q-item-section side>
-            <q-badge color="blue">
-              updated
-            </q-badge>
+        <q-item clickable to="banner">
+          <q-item-section>
+            QBanner
           </q-item-section>
         </q-item>
       </q-list>

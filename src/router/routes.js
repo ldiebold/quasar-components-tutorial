@@ -7,7 +7,8 @@ const routes = [
       { path: '', component: () => import('pages/Index.vue') },
       { path: 'ajax-bar', component: () => import('pages/QAjaxBarPage.vue') },
       { path: 'avatar', component: () => import('pages/QAvatarPage.vue') },
-      { path: 'badge', component: () => import('pages/QBadgePage.vue') }
+      { path: 'badge', component: () => import('pages/QBadgePage.vue') },
+      { path: 'banner', component: () => import('pages/QBannerPage.vue') }
     ]
   },
 
