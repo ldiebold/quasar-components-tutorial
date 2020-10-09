@@ -104,6 +104,12 @@
             QBar
           </q-item-section>
         </q-item>
+
+        <q-item clickable to="breadcrumbs">
+          <q-item-section>
+            QBreadcrumbs
+          </q-item-section>
+        </q-item>
       </q-list>
     </q-drawer>
 

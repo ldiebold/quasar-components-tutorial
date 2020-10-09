@@ -9,7 +9,8 @@ const routes = [
       { path: 'avatar', component: () => import('pages/QAvatarPage.vue') },
       { path: 'badge', component: () => import('pages/QBadgePage.vue') },
       { path: 'banner', component: () => import('pages/QBannerPage.vue') },
-      { path: 'bar', component: () => import('pages/QBarPage.vue') }
+      { path: 'bar', component: () => import('pages/QBarPage.vue') },
+      { path: 'breadcrumbs', component: () => import('pages/QBreadcrumbsPage.vue') }
     ]
   },
 
