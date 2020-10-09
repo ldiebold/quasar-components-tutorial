@@ -121,7 +121,7 @@ export default {
     return {
       leftDrawerOpen: false,
       mode: process.env.MODE,
-      electronBrowserWindow: this.$q.electron.remote.BrowserWindow.getFocusedWindow()
+      electronBrowserWindow: this.$q.platform.is.electron ? this.$q.electron.remote.BrowserWindow.getFocusedWindow() : null
     }
   },
 
