@@ -1,6 +1,11 @@
 <template>
   <q-page padding>
-    <q-badge multi-line color="amber-9" style="width: 75px;" outline>
+    <q-badge
+      multi-line
+      color="amber-9"
+      style="width: 75px;"
+      outline
+    >
       This is my awesome badge
     </q-badge>
   </q-page>
