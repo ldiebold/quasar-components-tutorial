@@ -12,8 +12,14 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          Quasar Components
         </q-toolbar-title>
+
+        <q-btn
+          icon="logout"
+          round
+          flat
+        />
       </q-toolbar>
 
       <q-bar
