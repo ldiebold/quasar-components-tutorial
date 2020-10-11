@@ -75,39 +75,14 @@
           Components
         </q-item-label>
         <!-- Component Menu Items -->
-        <q-item clickable to="ajax-bar">
+        <q-item
+          v-for="menuItem in componentMenuItems"
+          :key="menuItem"
+          clickable
+          :to="menuItem"
+        >
           <q-item-section>
-            QAjaxBar
-          </q-item-section>
-        </q-item>
-
-        <q-item clickable to="avatar">
-          <q-item-section>
-            QAvatar
-          </q-item-section>
-        </q-item>
-
-        <q-item clickable to="badge">
-          <q-item-section>
-            QBadge
-          </q-item-section>
-        </q-item>
-
-        <q-item clickable to="banner">
-          <q-item-section>
-            QBanner
-          </q-item-section>
-        </q-item>
-
-        <q-item clickable to="bar">
-          <q-item-section>
-            QBar
-          </q-item-section>
-        </q-item>
-
-        <q-item clickable to="breadcrumbs">
-          <q-item-section>
-            QBreadcrumbs
+            Q{{ menuItem }}
           </q-item-section>
         </q-item>
       </q-list>
@@ -120,11 +95,13 @@
 </template>
 
 <script>
+import componentImporter from 'src/router/componentImporter'
 
 export default {
   name: 'MainLayout',
   data () {
     return {
+      componentMenuItems: componentImporter.getPathNames(),
       leftDrawerOpen: false,
       mode: process.env.MODE,
       electronBrowserWindow: this.$q.platform.is.electron ? this.$q.electron.remote.BrowserWindow.getFocusedWindow() : null
