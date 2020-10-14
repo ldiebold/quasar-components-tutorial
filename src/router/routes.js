@@ -6,6 +6,7 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/Index.vue') },
+      { path: '/BtnDropdown/sub-route', component: () => import('pages/components/QBtnDropdownPage.vue') },
       ...componentImporter.getRoutes()
     ]
   },
