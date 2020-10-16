@@ -1,46 +1,31 @@
 <template>
   <q-page padding>
     <q-carousel
-      v-model="slide"
-      navigation
       animated
-      transition-next="slide-left"
-      transition-prev="slide-right"
-      height="200px"
-      padding
+      v-model="slide"
+      arrows
       infinite
-      control-type="push"
+      control-color="blue"
+      height="150px"
     >
-      <!-- { active, btnProps, onClick } -->
-      <template #navigation-icon="props">
-        <q-btn
-          flat
-          round
-          dense
-          :icon="props.active ? 'check' : props.btnProps.icon"
-          :color="props.active ? 'green' : 'white'"
-          @click="props.onClick"
-        />
-      </template>
-
-      <q-carousel-slide
-        class="bg-indigo"
-        name="1"
-      >
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis corrupti quaerat odio numquam doloremque fugit modi unde suscipit dolor. Vel et, incidunt quia dolorem ratione a sed qui similique possimus.
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis corrupti quaerat odio numquam doloremque fugit modi unde suscipit dolor. Vel et, incidunt quia dolorem ratione a sed qui similique possimus.
+      <q-carousel-slide name="first">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi sint labore minima architecto, quas accusamus blanditiis sit. Obcaecati officia quibusdam sequi, minus dolores debitis libero porro praesentium quo tempore provident.
       </q-carousel-slide>
       <q-carousel-slide
-        class="bg-blue"
-        name="2"
+        name="second"
+        class="q-pa-none"
       >
-        Two
-      </q-carousel-slide>
-      <q-carousel-slide
-        class="bg-orange"
-        name="3"
-      >
-        Three
+        <q-scroll-area class="fit">
+          <div class="q-carousel--padding">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi similique natus voluptates quos expedita hic omnis, aut necessitatibus officia pariatur placeat et, odio minus esse impedit itaque, enim quaerat. Obcaecati.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi similique natus voluptates quos expedita hic omnis, aut necessitatibus officia pariatur placeat et, odio minus esse impedit itaque, enim quaerat. Obcaecati.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi similique natus voluptates quos expedita hic omnis, aut necessitatibus officia pariatur placeat et, odio minus esse impedit itaque, enim quaerat. Obcaecati.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi similique natus voluptates quos expedita hic omnis, aut necessitatibus officia pariatur placeat et, odio minus esse impedit itaque, enim quaerat. Obcaecati.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi similique natus voluptates quos expedita hic omnis, aut necessitatibus officia pariatur placeat et, odio minus esse impedit itaque, enim quaerat. Obcaecati.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi similique natus voluptates quos expedita hic omnis, aut necessitatibus officia pariatur placeat et, odio minus esse impedit itaque, enim quaerat. Obcaecati.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi similique natus voluptates quos expedita hic omnis, aut necessitatibus officia pariatur placeat et, odio minus esse impedit itaque, enim quaerat. Obcaecati.
+          </div>
+        </q-scroll-area>
       </q-carousel-slide>
     </q-carousel>
   </q-page>
@@ -50,7 +35,26 @@
 export default {
   data () {
     return {
-      slide: '1'
+      slide: 'first',
+
+      fullscreen: false,
+
+      autoplay: true,
+
+      videos: [
+        {
+          name: 'first',
+          src: 'https://player.vimeo.com/video/467849498'
+        },
+        {
+          name: 'second',
+          src: 'https://player.vimeo.com/video/461590874'
+        },
+        {
+          name: 'third',
+          src: 'https://player.vimeo.com/video/442915353'
+        }
+      ]
     }
   }
 }
